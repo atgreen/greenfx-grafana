@@ -12,7 +12,8 @@ RUN chown -R grafana:grafana /etc/grafana && chown -R grafana:grafana /usr/share
 
 EXPOSE 3000
 
-USER grafana
+#USER grafana
+USER root
 CMD /usr/sbin/grafana-server \
      --homepath=/usr/share/grafana \
      --config=/etc/grafana/grafana.ini
